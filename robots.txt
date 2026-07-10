@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nwpa-hvac-quotes.netlify.app/sitemap.xml
