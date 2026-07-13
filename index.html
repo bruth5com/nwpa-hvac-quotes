@@ -24,6 +24,39 @@
     "areaServed": ["Venango County PA","Crawford County PA","Warren County PA","Forest County PA","Clarion County PA","Butler County PA","Mercer County PA"]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is there any cost to me for an estimate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Estimates are completely free with no obligation. Our service costs you nothing — we're compensated by the contractor network, not by homeowners." }
+      },
+      {
+        "@type": "Question",
+        "name": "How are the HVAC contractors in your network vetted?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Every HVAC contractor we connect you with is confirmed to carry valid liability insurance, follows local permitting requirements, and has verifiable local references or completed work we can review before they're added to our network." }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast will a contractor contact me?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most homeowners hear back from a local contractor within 24 hours of submitting the form, and urgent no-heat or no-AC requests are prioritized." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I'm not happy with the contractor I'm matched with?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Let us know and we'll match you with another vetted contractor in our network at no cost to you." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you charge homeowners anything if I hire the contractor?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Our matching service is completely free to homeowners, whether or not you decide to hire the contractor we connect you with." }
+      }
+    ]
+  }
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -114,6 +147,16 @@
     .areas-lead { color: var(--mid); font-size: 0.95rem; line-height: 1.8; max-width: 720px; margin: 0 auto 28px; text-align: center; }
     .town-list { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; max-width: 860px; margin: 0 auto; }
     .town { background: var(--white); border: 1px solid var(--light); border-radius: 20px; padding: 6px 14px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--navy); }
+    .faq-section { background: var(--white); padding: 64px 24px; border-top: 1px solid var(--light); }
+    .faq-section .section-label { text-align: center; }
+    .faq-section h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 5vw, 2.6rem); color: var(--navy); text-align: center; margin-bottom: 32px; }
+    .faq-inner { max-width: 760px; margin: 0 auto; }
+    .faq-item { background: var(--offwhite); border: 1px solid var(--light); border-radius: var(--radius); margin-bottom: 12px; padding: 4px 20px; }
+    .faq-item summary { font-weight: 700; color: var(--navy); padding: 16px 0; cursor: pointer; list-style: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; float: right; color: var(--gold); font-size: 1.3rem; }
+    .faq-item[open] summary::after { content: '\2212'; }
+    .faq-item p { color: var(--mid); font-size: 0.92rem; line-height: 1.65; padding-bottom: 18px; }
     footer { background: #111b27; color: rgba(255,255,255,0.6); text-align: center; padding: 28px 24px; font-size: 0.8rem; }
     footer a { color: rgba(255,255,255,0.75); text-decoration: underline; }
     footer a:hover { color: var(--gold); }
@@ -230,38 +273,4 @@
             <p class="blog-tag">HVAC</p>
             <h3>Should I Repair or Replace My HVAC System?</h3>
             <p>Homeowners in Cranberry, Wexford and Butler County ask this every year. We break it down clearly — age, cost, efficiency, and the 50% rule.</p>
-            <span class="blog-read">Read the Guide &rarr;</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="how-section" aria-labelledby="how-heading">
-      <div class="section-label">Simple Process</div>
-      <h2 id="how-heading">How It Works</h2>
-      <div class="steps">
-        <div class="step"><div class="step-num" aria-hidden="true">1</div><h3>Submit Your Request</h3><p>Takes under a minute. Tell us your service need and location.</p></div>
-        <div class="step"><div class="step-num" aria-hidden="true">2</div><h3>We Find Your Match</h3><p>We connect you with a vetted HVAC contractor near you.</p></div>
-        <div class="step"><div class="step-num" aria-hidden="true">3</div><h3>Get Your Estimate</h3><p>A real local contractor calls to schedule your free estimate.</p></div>
-      </div>
-    </section>
-
-    <section class="areas-section" aria-labelledby="areas-heading">
-      <div class="section-label">Service Areas</div>
-      <h2 id="areas-heading">HVAC Contractors Near You in NW Pennsylvania</h2>
-      <p class="areas-lead">From furnace repair in Franklin and Oil City to AC installation in Meadville, Grove City and Hermitage, our contractors serve homes across all seven counties of northwest Pennsylvania, including rural properties, camps and mobile homes.</p>
-      <div class="town-list">
-        <span class="town">Franklin</span> <span class="town">Oil City</span> <span class="town">Sugarcreek</span> <span class="town">Seneca</span> <span class="town">Cranberry</span> <span class="town">Emlenton</span> <span class="town">Meadville</span> <span class="town">Titusville</span> <span class="town">Cambridge Springs</span> <span class="town">Conneaut Lake</span> <span class="town">Cochranton</span> <span class="town">Warren</span> <span class="town">Youngsville</span> <span class="town">Tionesta</span> <span class="town">Marienville</span> <span class="town">Clarion</span> <span class="town">Knox</span> <span class="town">Butler</span> <span class="town">Slippery Rock</span> <span class="town">Zelienople</span> <span class="town">Grove City</span> <span class="town">Hermitage</span> <span class="town">Sharon</span> <span class="town">Greenville</span> <span class="town">Mercer</span> <span class="town">Sandy Lake</span>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>Powered by <a href="https://tableturndigital.net">TableTurn Digital</a> &mdash; Helping NW Pennsylvania Businesses Grow Online</p>
-    <p style="margin-top:8px;"><a href="tel:8142098304">(814) 209-8304</a></p>
-    <p style="margin-top:8px;font-size:0.75rem;color:rgba(255,255,255,0.25);">&copy; 2026 TableTurn Digital &middot; Franklin, PA &middot; Venango County</p>
-  </footer>
-
-</body>
-</html>
+            <span class="
