@@ -63,6 +63,7 @@
     :root {
       --navy: #1a2639; --gold: #c8972b; --gold-lt: #e8b84b; --offwhite: #f5f2ed;
       --mid: #3d4f63; --light: #e2ddd6; --white: #ffffff; --radius: 6px;
+      --gold-dark: #89671d;
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'Lato', sans-serif; background: var(--offwhite); color: var(--navy); font-size: 16px; line-height: 1.6; }
@@ -86,7 +87,7 @@
     .county-strip { margin-top: 28px; color: rgba(255,255,255,0.35); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
     .form-section { background: var(--white); border-top: 4px solid var(--gold); }
     .form-inner { max-width: 680px; margin: 0 auto; padding: 56px 24px; }
-    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 8px; }
     .form-inner h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 5vw, 2.6rem); color: var(--navy); line-height: 1.1; margin-bottom: 8px; }
     .form-inner .sub { color: var(--mid); font-size: 0.95rem; margin-bottom: 32px; }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -109,10 +110,6 @@
     .why-icon { font-size: 1.8rem; margin-bottom: 12px; }
     .why-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; letter-spacing: 0.04em; color: var(--navy); margin-bottom: 8px; }
     .why-card p { font-size: 0.9rem; color: var(--mid); line-height: 1.55; }
-    .why-card { display: flex; flex-direction: column; }
-    .why-link { margin-top: 12px; color: var(--gold); font-weight: 700; font-size: 0.85rem; text-decoration: none; letter-spacing: 0.02em; }
-    .why-link:hover, .why-link:focus { text-decoration: underline; outline: none; }
-    .why-link:focus { outline: 3px solid var(--gold); outline-offset: 2px; }
     .svc-section { background: var(--white); padding: 64px 24px; border-top: 1px solid var(--light); }
     .svc-section .section-label { text-align: center; }
     .svc-section h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 5vw, 2.6rem); color: var(--navy); text-align: center; margin-bottom: 40px; }
@@ -120,10 +117,6 @@
     .svc-card { background: var(--offwhite); border-radius: var(--radius); border-left: 3px solid var(--gold); padding: 26px 24px; }
     .svc-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 0.04em; color: var(--navy); margin-bottom: 8px; }
     .svc-card p { font-size: 0.88rem; color: var(--mid); line-height: 1.6; }
-    .svc-card { display: flex; flex-direction: column; }
-    .svc-link { margin-top: 12px; color: var(--gold); font-weight: 700; font-size: 0.85rem; text-decoration: none; letter-spacing: 0.02em; }
-    .svc-link:hover, .svc-link:focus { text-decoration: underline; outline: none; }
-    .svc-link:focus { outline: 3px solid var(--gold); outline-offset: 2px; }
     .testimonial-section { background: var(--offwhite); padding: 60px 24px; border-top: 1px solid var(--light); }
     .testimonial-inner { max-width: 760px; margin: 0 auto; }
     .testimonial-card { background: var(--white); border: 1px solid var(--light); border-left: 4px solid var(--gold); padding: 32px 28px; }
@@ -236,10 +229,10 @@
       <div class="section-label">Services We Connect You With</div>
       <h2 id="why-heading" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,5vw,2.6rem);color:var(--navy);text-align:center;margin-bottom:40px;">Local Technicians. Real Work.</h2>
       <div class="why-grid">
-        <div class="why-card"><div class="why-icon" aria-hidden="true">🔥</div><h3>Furnace Repair</h3><p>Fast diagnosis and repair before the next cold snap hits.</p><a class="why-link" href="/furnace-repair-and-replacement.html">Learn More &rarr;</a></div>
-        <div class="why-card"><div class="why-icon" aria-hidden="true">🛢️</div><h3>Oil Furnace Service</h3><p>Cleaning, repair and oil to gas conversions for the many NW PA homes that still heat with oil.</p><a class="why-link" href="/oil-furnace-service.html">Learn More &rarr;</a></div>
-        <div class="why-card"><div class="why-icon" aria-hidden="true">❄️</div><h3>AC Installation</h3><p>Beat the summer heat with the right system for your home.</p><a class="why-link" href="/ac-installation-and-repair.html">Learn More &rarr;</a></div>
-        <div class="why-card"><div class="why-icon" aria-hidden="true">♻️</div><h3>Heat Pumps</h3><p>Efficient year-round comfort — heating and cooling in one unit.</p><a class="why-link" href="/heat-pump-installation.html">Learn More &rarr;</a></div>
+        <div class="why-card"><div class="why-icon" aria-hidden="true">🔥</div><h3>Furnace Repair</h3><p>Fast diagnosis and repair before the next cold snap hits.</p></div>
+        <div class="why-card"><div class="why-icon" aria-hidden="true">🛢️</div><h3>Oil Furnace Service</h3><p>Cleaning, repair and oil to gas conversions for the many NW PA homes that still heat with oil.</p></div>
+        <div class="why-card"><div class="why-icon" aria-hidden="true">❄️</div><h3>AC Installation</h3><p>Beat the summer heat with the right system for your home.</p></div>
+        <div class="why-card"><div class="why-icon" aria-hidden="true">♻️</div><h3>Heat Pumps</h3><p>Efficient year-round comfort — heating and cooling in one unit.</p></div>
       </div>
     </section>
 
@@ -247,10 +240,10 @@
       <div class="section-label">Additional Services</div>
       <h2 id="svc-heading">More Ways We Help</h2>
       <div class="svc-grid">
-        <div class="svc-card"><h3>Annual Tune Ups</h3><p>Keep your system running clean before the season changes.</p><a class="svc-link" href="/annual-tune-ups.html">Learn More &rarr;</a></div>
-        <div class="svc-card"><h3>Ductwork</h3><p>Leaky ducts waste money. We connect you with duct specialists.</p><a class="svc-link" href="/ductwork-inspection-and-repair.html">Learn More &rarr;</a></div>
-        <div class="svc-card"><h3>Mobile Home Systems</h3><p>Furnace and AC service for mobile and manufactured homes across rural NW PA.</p><a class="svc-link" href="/mobile-home-hvac-systems.html">Learn More &rarr;</a></div>
-        <div class="svc-card"><h3>Emergency Service</h3><p>System down in the cold? We prioritize urgent requests.</p><a class="svc-link" href="/emergency-hvac-service.html">Learn More &rarr;</a></div>
+        <div class="svc-card"><h3>Annual Tune Ups</h3><p>Keep your system running clean before the season changes.</p></div>
+        <div class="svc-card"><h3>Ductwork</h3><p>Leaky ducts waste money. We connect you with duct specialists.</p></div>
+        <div class="svc-card"><h3>Mobile Home Systems</h3><p>Furnace and AC service for mobile and manufactured homes across rural NW PA.</p></div>
+        <div class="svc-card"><h3>Emergency Service</h3><p>System down in the cold? We prioritize urgent requests.</p></div>
       </div>
     </section>
 
