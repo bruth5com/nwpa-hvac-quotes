@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L864G2EY5P"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L864G2EY5P');</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NW Pennsylvania HVAC | Furnace Repair & AC Installation</title>
@@ -10,6 +12,11 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nwpa-hvac-quotes.netlify.app/" />
   <meta property="og:description" content="Furnace repair, AC installation, heat pumps and emergency HVAC service. Free estimates. Call (814) 209-8304." />
+  <meta property="og:image" content="https://nwpa-hvac-quotes.netlify.app/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NW Pennsylvania HVAC | Furnace Repair &amp; AC Installation" />
+  <meta name="twitter:description" content="Local HVAC contractors across NW Pennsylvania. Free estimates and follow-up within 24 hours." />
+  <meta name="twitter:image" content="https://nwpa-hvac-quotes.netlify.app/og-image.jpg" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -169,6 +176,15 @@
 :where(button, input:not([type="checkbox"]):not([type="radio"]), select) { min-height: 44px; }
 @media (pointer: coarse) { nav a, a[class*="btn"] { display: inline-flex; align-items: center; min-height: 44px; } }
 </style>
+  <style>
+    .mobile-action { display:none; }
+    @media (max-width:700px) {
+      body { padding-bottom:72px; }
+      .mobile-action { position:fixed; z-index:1000; left:0; right:0; bottom:0; display:grid; grid-template-columns:1fr 1fr; background:#0b2038; box-shadow:0 -4px 18px rgba(0,0,0,.25); }
+      .mobile-action a { min-height:60px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; text-decoration:none; }
+      .mobile-action a:last-child { background:#f2a51a; color:#0b2038; }
+    }
+  </style>
 </head>
 <body>
 
@@ -198,7 +214,8 @@
         <div class="section-label">Get Started</div>
         <h2 id="form-heading">Get Your Free HVAC Estimate</h2>
         <p class="sub">Serving Venango, Crawford, Warren, Forest, Clarion, Butler &amp; Mercer Counties. A local contractor will reach out within 24 hours.</p>
-        <form action="https://formspree.io/f/mkoeyrkn" method="POST">
+        <form action="https://formspree.io/f/mkoeyrkn" method="POST" data-thank-you="/thank-you.html">
+          <input type="hidden" name="_next" value="https://nwpa-hvac-quotes.netlify.app/thank-you.html" />
           <div class="form-grid">
             <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname" name="first_name" autocomplete="given-name" placeholder="John" required /></div>
             <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" name="last_name" autocomplete="family-name" placeholder="Smith" required /></div>
@@ -227,7 +244,7 @@
             <div class="form-group full"><button type="submit" class="submit-btn">Request My Free Estimate &rarr;</button></div>
           </div>
         </form>
-        <p class="privacy-note">Your info stays private. We only use it to connect you with a vetted local contractor.</p>
+        <p class="privacy-note">We use your information only to respond and connect you with a vetted local contractor. See our <a href="/privacy.html">Privacy Policy</a>.</p>
       </div>
     </section>
 
@@ -337,8 +354,31 @@
   <footer>
     <p>Powered by <a href="https://tableturndigital.net">TableTurn Digital</a> &mdash; Helping NW Pennsylvania Businesses Grow Online</p>
     <p style="margin-top:8px;"><a href="tel:8142098304">(814) 209-8304</a></p>
+    <p style="margin-top:8px;"><a href="/privacy.html">Privacy Policy</a></p>
     <p style="margin-top:8px;font-size:0.75rem;color:rgba(255,255,255,0.25);">&copy; 2026 TableTurn Digital &middot; Franklin, PA &middot; Venango County</p>
   </footer>
+
+  <div class="mobile-action" aria-label="Quick actions">
+    <a href="tel:8142098304">Call Now</a>
+    <a href="#get-estimate">Free Estimate</a>
+  </div>
+  <script>
+  document.querySelectorAll('form[data-thank-you]').forEach(function (form) {
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const button = form.querySelector('[type="submit"]');
+      if (button) { button.disabled = true; button.textContent = 'Sending...'; }
+      try {
+        const response = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{ Accept:'application/json' } });
+        if (!response.ok) throw new Error('Submission failed');
+        window.location.assign(form.dataset.thankYou);
+      } catch (error) {
+        if (button) { button.disabled = false; button.textContent = 'Request My Free Estimate →'; }
+        alert('We could not send your request. Please call (814) 209-8304 or try again.');
+      }
+    });
+  });
+  </script>
 
 </body>
 </html>
